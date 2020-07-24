@@ -4,13 +4,13 @@
 
 <mapper namespace="com.ljh.springcloud.dao.PayMentDao">
     <insert id="creat" parameterType="payment">
-     insert into payment(serial) values #{serial}
+     insert into payment(serial) values (#{serial})
     </insert>
     <resultMap id="BaseResultMap" type="com.ljh.springcloud.entity.PayMent">
-        <id column="id" jdbcType="int"/>
+        <id column="id" jdbcType="INTEGER"/>
         <id column="serial" property="serial" jdbcType="VARCHAR"/>
     </resultMap>
-    <select id="getPayMentById" parameterType="int" resultType="BaseResultMap">
+    <select id="getPayMentById" parameterType="int" resultMap="BaseResultMap">
         select * from payment where id=#{id}
     </select>
 </mapper>

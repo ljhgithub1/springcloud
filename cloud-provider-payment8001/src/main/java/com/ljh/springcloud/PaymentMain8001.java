@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Date: 2020/7/24 14:22
  */
 @SpringBootApplication
-@MapperScan("com.ljh.springcloud.dao")
+@MapperScan(basePackages ="com.ljh.springcloud.dao")
 public class PaymentMain8001 {
     public static void main(String[] args) {
         SpringApplication.run(PaymentMain8001.class,args);
